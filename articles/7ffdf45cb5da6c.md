@@ -1,5 +1,5 @@
 ---
-title: "Beamer (Metropolis) : Latex package for presentation"
+title: "Beamer (Metropolis) でスライドを作る"
 emoji: "🍁"
 type: "tech" # tech: 技術記事 / idea: アイデア
 topics: [Latex, Beamer, Metropolis]
