@@ -6,33 +6,18 @@ topics: [Latex, Beamer, Metropolis]
 published: true
 ---
 
-## はじめに
+大学/大学院生であればLatexで論文を書いたり、ミーティング資料を作成される方も多いと思います。
+そこでLatexのプレゼンテーションパッケージであるBeamerを紹介します。
 
-大学/大学院生であればLatexで論文を書いたり、ミーティング資料を作成される方も多いと思います。先にLatexで論文を書いた後にPowerPointでスライドを作成するのは大変なので、そのままLatexでスライドを作りたいこともあるでしょう。
-
-そこでLatexのプレゼンテーションパッケージであるBeamerを紹介します。筆者もBeamerでスライドを作成してみましたが、使い心地はLatexに抵抗がなければかなり良いと思いました。
-
-Latexの使い方等は特に説明しません。以下の記事が大変わかりやすいのでこちらを参照してください。
-
-- 環境構築 (VSCode + Latex)
-	- [VSCode で最高の LaTeX 環境を作る](https://qiita.com/rainbartown/items/d7718f12d71e688f3573)
-	- [Latexmkから学ぶPDF化までの処理の流れ](https://qiita.com/Rumisbern/items/d9de41823aa46d5f05a8)
-
-- Latex記法など
-	- [TEX Wiki](https://texwiki.texjp.org/?LaTeX入門)
-	- 各種大学の資料
-
-## Beamerとは
-Beamerは、LaTeXで作成されたプレゼンテーション用のパッケージです。Latexの書式で作成でき、数式を美しくスライドに反映することができます。また、スライドのデザインも多くの方がBeamerテンプレートを公開しており、それらを利用することでモダンなスライドを作成することができます。
+## Beamer
+Beamerは、LaTeXで作成されたプレゼンテーション用のパッケージです。Latexの書式で作成でき、数式を美しくスライドに反映することができます。また、多くの方がBeamerのスライドテンプレートを公開しており、それらを利用することでモダンなスライドを作成することができます。
 
 Beamerは、PDF形式で出力されるため、Adobe Readerやその他のPDFリーダーで表示することができます。また、Beamerは、動画ファイルなどの外部リソースをプレゼンテーションに追加することができるため、豊富なコンテンツを含むプレゼンテーションを作成することができます。
 
-
-## Beamerテーマ：Metropolis
-
+## Metropolis
 Beamerの有名なテーマの一つに[Metropolis](https://github.com/matze/mtheme)があります。
 
-![Metropolis theme](/images/Beamer/metropolis_theme.png)
+![Metropolis theme](/images/beamer/metropolis_theme.png)
 *Metropolis theme*
 
 > Metropolis is a simple, modern Beamer theme suitable for anyone to use. It tries to minimize noise and maximize space for content; the only visual flourish it offers is an (optional) progress bar added to each slide.
@@ -60,7 +45,7 @@ latex metropolistheme.ins
 ## テーマカラー設定
 
 Metropolisはテーマカラーを自分でカスタマイズすることができます。
-HTMLカラーコードで指定できるので、ここをいじるだけでもかなり見た目に変化をつけることができます。
+HTMLカラーコードで指定できるので、かなり見た目に変化をつけることができます。
 
 ```latex:
 % ユーザーカラーを定義する
@@ -77,7 +62,7 @@ HTMLカラーコードで指定できるので、ここをいじるだけでも�
 より細かい設定に関しては[こちらのissue](https://github.com/matze/mtheme/issues/193)を参考にしてください。
 :::
 
-![background color](/images/Beamer/background.jpeg)
+![background color](/images/beamer/background.jpeg)
 *change background color*
 
 ```latex:
@@ -104,14 +89,14 @@ HTMLカラーコードで指定できるので、ここをいじるだけでも�
     bg=}
 ```
 
-さっくりまとめると、`fg=`で文字の色を、`bg=`でブロック背景を設定できます。
+`fg=`で文字の色を、`bg=`でブロック背景を設定できます。
 
-ここで注意すべきは`normal text`の存在です。`normal text`の`fg=`は単純に文章の色を指定できますが、`bg=`ではスライドの背景色が変わります。デフォルトだと薄いグレーですが、ここで色を指定するとその色に変わります。`bg=white`とすれば、画像を挿入した際に境界線が消えるので良いかもしれません（もちろん好みです）。
+`normal text`の`fg=`は単純に文章の色を指定できますが、`bg=`ではスライドの背景色が変わります。デフォルトだと薄いグレーですが、ここで色を指定するとその色に変わります。`bg=white`とすれば、画像を挿入した際に境界線が消えるので良いかもしれません。
 
 
 ## その他のテーマ
 
-GitHubでBeamer-themeなどのタグを検索すると色々なテーマが見つかります。いくつかおすすめを紹介しておきます。
+GitHubでBeamer-themeなどのタグを検索すると様々ななテーマが見つかります。いくつかおすすめを紹介しておきます。
 
 - [sthlmNord BeamerTheme](https://github.com/mholson/sthlmNordBeamerTheme)
 かなりモダンなスライドです。DarkとLightの二つのモードが用意されているので、目的に応じてスライドの雰囲気を変えることができます。
@@ -124,8 +109,14 @@ Metropolisをかっこよくした感じのスライドです。`# beamer-theme`
 
 ## 最後に
 
-BeamerはLatex記法で簡単にスライドを作成することができます。Power Pointとどちらが良いかは完全に好みです。
+BeamerはLatex記法で簡単にスライドを作成することができます。
 
 Metropolisをはじめとして多くのモダンなテーマがユーザーによって公開されているので、Latexで文章を書いてるだけで美しいスライドができるのはBeamerの強みです。
 
 Latexユーザーはぜひ一度お試しください。
+
+## 参考資料
+- [VSCode で最高の LaTeX 環境を作る](https://qiita.com/rainbartown/items/d7718f12d71e688f3573) :contentReference[oaicite:0]{index=0}
+- [Latexmkから学ぶPDF化までの処理の流れ](https://qiita.com/Rumisbern/items/d9de41823aa46d5f05a8) :contentReference[oaicite:1]{index=1}
+- [TEX Wiki (LaTeX入門)](https://texwiki.texjp.org/?LaTeX入門) :contentReference[oaicite:2]{index=2}
+- [Metropolis GitHubリポジトリ](https://github.com/matze/mtheme) :contentReference[oaicite:3]{index=3}
