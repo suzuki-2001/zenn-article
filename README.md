@@ -12,3 +12,4 @@ npx zenn preview
 
 ## Articles
 - 21d304b5f80e00: MLflow Prompt Enginnering UIでLLM-jpなどの非公式サポートローカルLLMを利用する
+- 0dd133e54944cd: AdaptyvBioタンパク質デザインコンペ参戦記
